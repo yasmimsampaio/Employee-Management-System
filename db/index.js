@@ -11,6 +11,8 @@ class DB {
     return this.connection.query(
       // CREATE SELECT STATMENT WITH THE FOLLOWING COLUMNS FROM THREE TABLES.
       // SELECT id, first_name, last_name FROM employee TABLE AND SELECT department name from department TABLE AND SELECT salary FROM role TABLE
+      "SELECT employee.id, employee.first_name, employee.last_name, department.name, role.salary FROM employee LEFT JOIN role ON employee.role_id = role.id LEFT JOIN department ON role.department_id = department.id;"
+  
       // YOUR NEED TO USE LEFT JOINS TO JOIN THREE TABLES
       // YOUR CODE HERE
     );
