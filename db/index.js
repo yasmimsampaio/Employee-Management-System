@@ -65,6 +65,7 @@ class DB {
   createRole(role) {
     return this.connection.query(
       // YOUR CODE HERE
+      "INSERT INTO role SET ?", role
       );
   }
 
