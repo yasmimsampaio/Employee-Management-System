@@ -155,6 +155,8 @@ async function updateEmployeeRole() {
     // THE PROPERTY value SHOULD CONTAIN id.
     // THIS OBJECT FOR EACH MANAGER WILL RETURN TO MAP() TO CONSTRUCT AN ARRAY TO BE RETURNED AND BE STORED TO managerChoices.
     // YOUR CODE HERE    
+    name: first_name + " " + last_name,
+    value: id
 
   }));
 
@@ -182,7 +184,7 @@ async function updateEmployeeRole() {
       choices: roleChoices
     }
   ]);
-
+  console.log(employeeId, roleId);
   await db.updateEmployeeRole(employeeId, roleId);
 
   console.log("Updated employee's role");
