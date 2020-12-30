@@ -81,6 +81,7 @@ class DB {
   createDepartment(department) {
     return this.connection.query(
       // YOUR CODE HERE
+      "INSERT INTO department SET ?", department
     );
   }
 
